@@ -1,0 +1,25 @@
+version: 4.2.29
+session: 6816ff6af9049b0dd7618250
+steps:
+  - prompt: Click on "Services" in the header.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Services
+        description: services link in the header
+        action: click
+  - prompt: Assert that the services page is displayed.
+    commands:
+      - command: assert
+        expect: the services dropdown menu is visible
+  - prompt: Click on a specific service to view details.
+    commands:
+      - command: hover-text
+        text: Custom Software Development
+        description: custom software development option in the services dropdown
+        action: click
+  - prompt: Assert that the service details are shown.
+    commands:
+      - command: assert
+        expect: the "Custom Software Development" heading is visible

@@ -1,0 +1,33 @@
+version: 4.2.29
+session: 6816ff7d1c54b9d176f2810d
+steps:
+  - prompt: Click on "About us" in the header.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: About us
+        description: about us link in the header
+        action: click
+  - prompt: Assert that the about us page is displayed.
+    commands:
+      - command: assert
+        expect: IT PARTNER THAT DELIVERS AWAITED IT EXCELLENCE is visible
+  - prompt: Scroll to the end of the page.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 3000
+  - prompt: Scroll to the end of the page.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 3000
+  - prompt: Assert that the footer is visible.
+    commands:
+      - command: assert
+        expect: We value your privacy is visible

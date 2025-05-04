@@ -1,0 +1,74 @@
+version: 4.2.29
+session: 6816ff691c54b9d176f280fe
+steps:
+  - prompt: Click on "Contact us" in the header.
+    commands:
+      - command: hover-text
+        text: Contact us
+        description: contact us button in the header
+        action: click
+  - prompt: Assert that the contact form is displayed.
+    commands:
+      - command: assert
+        expect: the contact form with "First name" field is displayed
+  - prompt: Fill in the contact form with valid data.
+    commands:
+      - command: hover-text
+        text: First name*
+        description: first name input label
+        action: click
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last name*
+        description: last name input label
+        action: click
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email*
+        description: email input label
+        action: click
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Accept All
+        description: accept all cookies button in the cookie consent popup
+        action: click
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: 1234567890
+      - command: hover-text
+        text: Company name*
+        description: company name input label
+        action: click
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: Example Corp
+      - command: press-keys
+        keys:
+          - tab
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: Hello, I am interested in your services.
+  - prompt: Click the "Submit" button.
+    commands:
+      - command: hover-text
+        text: Get in touch
+        description: submit button in the contact form section
+        action: click

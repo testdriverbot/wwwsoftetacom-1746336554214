@@ -1,0 +1,19 @@
+version: 4.2.29
+session: 6816ff6af9049b0dd7618252
+steps:
+  - prompt: Click the "Work With Us" button.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll-until-text
+        text: Work With Us
+        direction: down
+        method: keyboard
+      - command: hover-text
+        text: Work With Us
+        description: button to apply for jobs
+        action: click
+  - prompt: Assert that the respective page or section opens.
+    commands:
+      - command: assert
+        expect: the page displays "What is your company name?"

@@ -1,0 +1,43 @@
+version: 4.2.29
+session: 6816ff6bf9049b0dd7618254
+steps:
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Click on a provided link
+    commands:
+      - command: hover-text
+        text: Let's talk
+        description: red button with text "Let's talk" in the main content area
+        action: click
